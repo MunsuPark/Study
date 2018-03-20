@@ -159,3 +159,9 @@ catch (e) {
     logMyError(e);
 }
 ```
+
+만약 `finally` 블록이 값을 반환하였을 경우, `try` 블록과 `catch` 블록의 `return` 문장과 상관없이 `try-catch-finally` 생산물의 반환값이 된다. 또한 `try`나 `catch`에서 예외가 발생했을 때도 반환값이 덮어써진다.
+
+### Error 객체를 도구화 하기
+
+더 정제된 메세지를 얻기위해 `name` 속성과 `message` 속성을 사용할 수 있다. `catch` 블록이 시스템의 예외와 직접 작성한 에러를 구분할 때 유용하다.
